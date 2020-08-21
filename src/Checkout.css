@@ -1,0 +1,29 @@
+.checkout {
+	display: flex;
+	padding: 20px;
+	height: max-content;
+	justify-content: center;
+}
+
+.checkout__ad {
+	width: 100%;
+}
+
+.checkout__title {
+	margin: 5px 0;
+}
+
+.checkout__title h2 {
+	margin: 5px 5px;
+}
+
+.checkout__left,
+.checkout__right {
+	padding:10px;
+}
+
+@media only screen and (max-width:750px){
+	.checkout {
+		flex-direction: column-reverse;
+	}
+}
