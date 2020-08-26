@@ -5,6 +5,13 @@ import { useStateValue } from './StateProvider';
 function Product({ id, title, price, rating, image }) {
 	const [, dispatch] = useStateValue();
 	const addToBasket = () => {
+		console.log({
+			id,
+			title,
+			price,
+			rating,
+			image
+		});
 		dispatch({
 			type: "ADD_TO_BASKET",
 			item: {
@@ -28,7 +35,7 @@ function Product({ id, title, price, rating, image }) {
 					{Array(rating).fill().map((_) => (<span role="img" aria-label="rating-stars">⭐</span>))}
 				</div>
 			</div>
-			<img src={image} alt="Product"/>
+			<img src={image} alt="Product" />
 			<button onClick={addToBasket}>Add to basket</button>
 		</div>
 	);
