@@ -11,7 +11,7 @@ function Header() {
 	const login = () => {
 		if (user) {
 			auth.signOut();
-		}
+		} 
 	};
 	return (
 		<nav className="header">
